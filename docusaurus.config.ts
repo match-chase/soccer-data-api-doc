@@ -31,6 +31,24 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // SEO and indexing configuration
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'robots',
+        content: 'noindex, nofollow, noarchive, nosnippet',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'googlebot',
+        content: 'noindex, nofollow',
+      },
+    },
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -51,6 +69,7 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: false, // Disable sitemap generation
       } satisfies Preset.Options,
     ],
   ],

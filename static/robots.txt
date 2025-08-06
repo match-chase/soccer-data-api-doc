@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Block all search engine crawlers from indexing this site
+# This is a private migration documentation for MatchChase
