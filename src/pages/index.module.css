@@ -1,0 +1,65 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.summary {
+  padding: 4rem 0;
+  background: var(--ifm-color-secondary-lightest);
+}
+
+.statCard {
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary-dark);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 996px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  .summary {
+    padding: 2rem 0;
+  }
+
+  .statCard {
+    margin-bottom: 1rem;
+  }
+}

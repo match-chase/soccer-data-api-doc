@@ -1,0 +1,26 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureIcon {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.featureStats {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--ifm-color-primary-lightest);
+  border-radius: 1rem;
+}
