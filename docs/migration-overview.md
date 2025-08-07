@@ -16,12 +16,14 @@ Bu dokümantasyon, MatchChase eski veritabanı şemasından yeni Sportradar API'
 ## 🎯 Kritik Eksiklikler
 
 ### ❌ Tamamen Karşılanamayan Veriler
-- **Finansal Bilgiler**: Piyasa değeri, transfer ücretleri, maaş bilgileri
+
+- **Finansal Bilgiler**: Piyasa değeri, transfer ücretleri
 - **Tarihsel Veriler**: Piyasa değeri gelişimi, geçmiş sezon performans trendleri
-- **Lig Meta Bilgileri**: Lig hiyerarşisi, format detayları, öncelik sıralaması
+- **Lig Meta Bilgileri**: Lig hiyerarşisi, öncelik sıralaması
 - **Oyuncu Ek Bilgileri**: Genç kulüp geçmişi, aile bilgileri, kişisel hikayeler
 
 ### ⚠️ Görsel İçerik Durumu
+
 **Sportradar Images API** mevcut ancak kullanım kısıtlamaları var:
 
 - **✅ Mevcut İçerik**: Oyuncu fotoğrafları, takım logoları, venue görselleri, maç içi aksiyon fotoğrafları
@@ -30,31 +32,35 @@ Bu dokümantasyon, MatchChase eski veritabanı şemasından yeni Sportradar API'
 - **🤝 Gerekli**: Sportradar'dan yazılı onay alınmalı
 
 ### ⚠️ Kısmi Karşılanan Veriler
+
 - **Sakatlık Takibi**: Temel bilgiler var, detaylı iyileşme süreci eksik
 - **Transfer Bilgileri**: Temel transfer var, finansal detaylar eksik
 - **Teknik Kadro**: Sadece mevcut teknik direktör, geçmiş kadro eksik
-- **Maç Detayları**: Ek süre ayrımı eksik, bazı timeline detayları sınırlı
+- **Maç Detayları**: Ek bazı timeline detayları sınırlı
 
 ## 🆕 Yeni API'den Elde Edilebilecek Ek Veriler
 
 ### 🏟️ **Maç Deneyimi Verileri**
+
 - **Hava Durumu**: Sıcaklık, rüzgar, saha koşulları
-- **Seyirci Bilgileri**: Attendance, stadyum kapasitesi
 - **Yayın Bilgileri**: TV kanalları, ülkeler, streaming URL'leri
 - **Koordinat Verileri**: Maç olaylarının saha üzerindeki konumları
 
 ### 📊 **Gelişmiş Performans Analitikleri**
+
 - **xG (Expected Goals)**: Beklenen gol istatistikleri
 - **Fiziksel Performans**: Kat edilen mesafe, sprint sayısı, en yüksek hız
 - **Detaylı İstatistikler**: Hava topu mücadelesi, dribling, ikili mücadeleler
 - **Kaleci Metrikleri**: Kurtarış türleri, dağıtım başarı oranı
 
 ### 🎨 **Görsel ve Meta Veriler**
+
 - **Forma Bilgileri**: Renk kodları, desenler, sezon formları
 - **Takım Meta Bilgileri**: Yaş grubu, cinsiyet, form durumu
 - **Oyuncu Detayları**: Lakap, fiziksel özellikler, tercih edilen ayak
 
 ### 🌍 **Uluslararası Standartlar**
+
 - **Çoklu Dil Desteği**: 10+ dil seçeneği
 - **ISO Standartları**: Ülke kodları, saat dilimleri
 - **Standardize Format**: Tutarlı veri yapısı ve API response'ları
@@ -64,26 +70,31 @@ Detaylı liste için: **[API Ekstra Verileri](./api-extras)** sayfasını incele
 ## 📋 Migration Stratejisi
 
 ### Faz 1: Temel Yapı ✅ %100 Karşılanabilir
+
 - **Country**: Tam karşılanabilir
 - **League Team**: Takım-lig ilişkileri
 - **Generic Status**: Maç durumları
 
 ### Faz 2: Takım ve Oyuncu Verileri ✅ %90+ Karşılanabilir
+
 - **Team**: Çoğu bilgi karşılanabilir (sadece kuruluş yılı eksik)
 - **Player**: Çoğu bilgi karşılanabilir (sadece piyasa değeri eksik)
 - **Staff, Referee, Citizenship**: Temel bilgiler
 
 ### Faz 3: Maç Verileri ✅ %100 Karşılanabilir
+
 - **Fixture, Match, Venue**: Tam karşılanabilir
 - **Timeline Olayları**: Gol, kart, değişiklik, penaltı, ceza
 - **Match Statistics**: Gelişmiş istatistikler
 
 ### Faz 4: Transfer ve Sakatlık ⚠️ %60 Karşılanabilir
+
 - **Player Transfer**: Temel bilgiler (finansal detaylar eksik)
 - **Player Injury**: Temel sakatlık takibi
 - **Missing Players**: API'den alınabilir
 
 ### Faz 5: Ekstra Veriler ve Optimizasyon 🚀
+
 - **API Ekstra Verileri**: Hava durumu, koordinatlar, gelişmiş analitikler
 - **Görsel İçerik**: Images API entegrasyonu (onay gerekli)
 - **Performans Optimizasyonu**: Caching, rate limiting
@@ -91,6 +102,7 @@ Detaylı liste için: **[API Ekstra Verileri](./api-extras)** sayfasını incele
 ## 🔗 Detaylı Dokümantasyon
 
 ### 📊 **Tablo Mapping Analizleri**
+
 - [Temel Yapı Tabloları](./tables/basic-structure)
 - [Takım ve Oyuncu Tabloları](./tables/teams-players)
 - [Maç Verileri Tabloları](./tables/match-data)
@@ -98,4 +110,5 @@ Detaylı liste için: **[API Ekstra Verileri](./api-extras)** sayfasını incele
 - [Transfer ve Kadro Tabloları](./tables/transfers-squad)
 
 ### 🚀 **Ekstra Veriler ve Fırsatlar**
+
 - [API Ekstra Verileri](./api-extras) - Sportradar'dan gelen tüm ek veriler ve kullanım önerileri

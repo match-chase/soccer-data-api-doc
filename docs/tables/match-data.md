@@ -66,8 +66,8 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 |------------|----------------|----------|-------|
 | `homeTeamGoals` | `sport_event_status.home_score` | `/sport_events/{id}/summary` | ✅ |
 | `awayTeamGoals` | `sport_event_status.away_score` | `/sport_events/{id}/summary` | ✅ |
-| `homeTeamPosition` | - | - | ❌ |
-| `awayTeamPosition` | - | - | ❌ |
+| `homeTeamPosition` | Bunu Hesaplayabiliriz | - | ❌ |
+| `awayTeamPosition` | Bunu Hesaplayabiliriz | - | ❌ |
 | `homeStartingLineUp` | Lineup data | `/sport_events/{id}/lineups` | ✅ |
 | `awayStartingLineUp` | Lineup data | `/sport_events/{id}/lineups` | ✅ |
 | `attendance` | `sport_event.attendance` | `/sport_events/{id}/summary` | ✅ |

@@ -212,7 +212,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 | `isSubstitute` | `!player.starter` | `/sport_events/{id}/lineups` | ✅ |
 | `isStarting` | `player.starter` | `/sport_events/{id}/lineups` | ✅ |
 | `shirtNumber` | `player.jersey_number` | `/sport_events/{id}/lineups` | ✅ |
-| `position` | - | - | ❌ |
+| `position` | `player.postion` | `/sport_events/{id}/lineups` | ✅ |
 | `marketValue` | - | - | ❌ |
 
 **Durum:** ⚠️ Temel kadro bilgileri var, performans metrikleri eksik
