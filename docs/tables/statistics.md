@@ -5,6 +5,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 ## 1. Match Statistic Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -63,6 +64,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 | `order` | Integer | Sıralama | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `offsidesHome` | `statistics.totals[].competitors[0].offsides` | `/sport_events/{id}/summary` | ✅ |
@@ -102,6 +104,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 ## 2. Player Statistic Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -150,6 +153,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 | `touchesInBox` | Integer | Ceza sahasında dokunuş | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `appearances` | Maç sayısı hesaplanabilir | Timeline'dan | ⚠️ |
@@ -186,6 +190,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 ## 3. Match Player Tablosu (Maç Bazında Oyuncu Performansı)
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -200,8 +205,8 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 | `position` | String | Pozisyon | ❌ |
 | `marketValue` | Integer | Piyasa değeri | ❌ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/lineups` | ✅ |
@@ -224,6 +229,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 ### 📊 **Yeni Keşfedilen İstatistikler:**
 
 **Match Statistics (Takım Bazında) - 25+ ek alan:**
+
 - `chances_created` - Yaratılan fırsatlar
 - `crosses_successful/total` - Orta başarı oranları
 - `defensive_blocks` - Savunma blokları
@@ -238,6 +244,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 - `was_fouled` - Faul çekilme
 
 **Player Statistics (Oyuncu Bazında) - 20+ ek alan:**
+
 - `aerial_duels_won/total` - Hava topu mücadelesi
 - `chances_created` - Yaratılan fırsatlar
 - `crosses_successful/total` - Orta başarı oranları
@@ -251,6 +258,7 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 - `touches_in_box` - Ceza sahasında dokunuş
 
 ### 🚀 **Endpoint:**
+
 - **Extended Summary:** `/sport_events/{id}/extended_summary`
 - **Premium özellik** - ek ücret gerekebilir
 
@@ -259,13 +267,16 @@ Bu bölümde maç ve oyuncu istatistik tablolarının migration mapping'i yer al
 ## Özet
 
 ### ✅ Tam Karşılanan Tablolar (1/3)
+
 - **Match Statistic**: Temel + gelişmiş maç istatistikleri (Extended API ile)
 
 ### ⚠️ Kısmi Karşılanan Tablolar (2/3)
+
 - **Player Statistic**: Extended API ile zengin veriler, temel analitikler eksik
 - **Match Player**: Kadro bilgileri var, performans eksik
 
 ### 🔧 Öneriler
+
 1. **Extended API** kullanarak çok daha detaylı istatistikler elde edin
 2. **Timeline API** kullanarak oyuncu performansını hesapla
 3. **Piyasa değeri** için alternatif kaynak bul

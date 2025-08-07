@@ -5,6 +5,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 1. Fixture Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -17,9 +18,8 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `round` | Integer | Tur numarası | ✅ |
 | `status` | Integer | Maç durumu | ✅ |
 
-
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | - | - | ❌ |
@@ -31,7 +31,6 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `round` | `sport_event_context.round.number` | `/sport_events/{id}/summary` | ✅ |
 | `status` | `sport_event_status.status` | `/sport_events/{id}/summary` | ✅ |
 
-
 **Durum:** ✅ Temel bilgiler karşılanabilir
 
 ---
@@ -39,6 +38,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 2. Match Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -62,6 +62,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `possessionHome/Away` | Numeric | Top hakimiyeti | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `homeTeamGoals` | `sport_event_status.home_score` | `/sport_events/{id}/summary` | ✅ |
@@ -88,6 +89,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 3. Venue Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -97,8 +99,8 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `surface` | String | Zemin tipi (default: 'grass') | ❌ |
 | `teamId` | UUID | Ev sahibi takım | ❌ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `venue.name` | Sport event içinde | ✅ |
@@ -114,6 +116,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 4. Match Goal Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -127,8 +130,8 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `goalTimeExtra` | Integer | Ek süre | ✅ |
 | `isOwnGoal` | Boolean | Kendi kalesine mi | ✅ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/timeline` | ✅ |
@@ -148,6 +151,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 5. Match Card Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -160,8 +164,8 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `cardTimeExtra` | Integer | Ek süre | ✅ |
 | `cardType` | Integer | Kart tipi (1:Sarı, 2:Kırmızı, 3:İkinci sarı) | ✅ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/timeline` | ✅ |
@@ -180,6 +184,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 6. Match Substitution Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -192,6 +197,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `substitutionTimeExtra` | Integer | Ek süre | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/timeline` | ✅ |
@@ -209,6 +215,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 7. Match Referee Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -217,6 +224,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `refereeType` | String | Hakem tipi (main/assistant) | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/summary` | ✅ |
@@ -230,6 +238,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 8. Match Sanction Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -241,6 +250,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `sanctionTime` | Integer | Ceza dakikası | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/timeline` | ✅ |
@@ -257,6 +267,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## 9. Match Penalty Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -270,6 +281,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 | `penaltyReason` | String | Penaltı sebebi | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `matchId` | Sport event ID | `/sport_events/{id}/timeline` | ✅ |
@@ -288,6 +300,7 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 ## Özet
 
 ### ✅ Tam Karşılanan Tablolar (7/9)
+
 - **Fixture**: Temel maç bilgileri
 - **Match**: Maç sonuçları ve detayları
 - **Venue**: Stadyum bilgileri
@@ -299,12 +312,15 @@ Bu bölümde maç, venue ve maç detay olaylarının migration mapping'i yer alm
 - **Match Penalty**: Penaltı bilgileri
 
 ### ⚠️ Kısmi Karşılanan Tablolar (0/9)
+
 - Hiçbiri
 
 ### ❌ Kritik Eksiklikler (0/9)
+
 - Hiçbiri
 
 ### 🔧 Öneriler
+
 1. **Timeline API** kullanarak tüm maç olaylarını alın
 2. **Summary API** ile temel maç bilgilerini tamamlayın
 3. **Lineups API** ile kadro bilgilerini entegre edin

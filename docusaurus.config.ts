@@ -63,7 +63,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/atakan/soccer-data-api/tree/main/docs/docusaurus/',
+          editUrl: 'https://github.com/match-chase/soccer-data-api-doc/tree/main/docs/docusaurus/',
         },
         blog: false,
         theme: {
@@ -92,7 +92,7 @@ const config: Config = {
         },
 
         {
-          href: 'https://github.com/atakan/soccer-data-api',
+          href: 'https://github.com/match-chase/soccer-data-api-doc',
           label: 'GitHub',
           position: 'right',
         },
@@ -136,16 +136,16 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/atakan/soccer-data-api',
+              href: 'https://github.com/match-chase/soccer-data-api-doc',
             },
             {
               label: 'Old Database Schema',
-              href: 'https://github.com/atakan/soccer-data-api/blob/main/docs/old_db_schema.sql',
+              href: 'https://github.com/match-chase/soccer-data-api-doc/blob/main/docs/old_db_schema.sql',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} MatchChase Migration Docs. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MatchChase Migration Docs.`,
     },
     prism: {
       theme: prismThemes.github,
