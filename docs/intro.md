@@ -31,9 +31,11 @@ detaylı bir şekilde analiz etmek.
 Migration analizi için aşağıdaki bölümleri inceleyebilirsiniz:
 
 ### 📋 [Migration Overview](./migration-overview)
+
 Genel durum özeti ve migration stratejisi
 
 ### 📊 Detaylı Tablo Analizleri
+
 - [Temel Yapı Tabloları](./tables/basic-structure)
 - [Takım ve Oyuncu Tabloları](./tables/teams-players)
 - [Maç Verileri Tabloları](./tables/match-data)
@@ -41,6 +43,7 @@ Genel durum özeti ve migration stratejisi
 - [Transfer ve Kadro Tabloları](./tables/transfers-squad)
 
 ### 🚀 [API Ekstra Verileri](./api-extras)
+
 Sportradar API'den gelen tüm ekstra veriler ve kullanım önerileri
 
 ## ⚠️ Kritik Noktalar

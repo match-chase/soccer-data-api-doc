@@ -5,6 +5,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 1. Player Transfer Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -24,6 +25,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | `transfer.player.id` | `/seasons/{id}/transfers` | ✅ |
@@ -47,6 +49,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 2. Team Player Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -57,6 +60,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `shirtNumber` | Integer | Forma numarası | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `teamId` | Competitor ID | `/competitors/{id}/profile` | ✅ |
@@ -72,6 +76,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 3. Team Staff Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -83,6 +88,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `order` | Integer | Sıralama | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `teamId` | Competitor ID | `/sport_events/{id}/lineups` | ✅ |
@@ -99,6 +105,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 4. Player Development Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -108,6 +115,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `marketValue` | Integer | Piyasa değeri | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | - | - | ❌ |
@@ -122,6 +130,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 5. Player Injury Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -133,6 +142,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `isImproved` | Boolean | İyileşti mi | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | - | - | ❌ |
@@ -149,6 +159,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 6. Player Additional Info Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -158,6 +169,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | - | - | ❌ |
@@ -171,6 +183,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 5. Player Injury Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -182,6 +195,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `returnDate` | Date | Dönüş tarihi | ❌ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | `players[].player.id` | `/seasons/{id}/missing_players` | ✅ |
@@ -198,6 +212,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## 6. Player Additional Info Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -206,6 +221,7 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 | `description` | String | Açıklama | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | Player ID | `/players/{id}/profile` | ✅ |
@@ -219,36 +235,43 @@ Bu bölümde transfer, kadro yönetimi ve oyuncu detay tablolarının migration 
 ## Özet
 
 ### ✅ Tam Karşılanan Tablolar (1/6)
+
 - **Team Player**: Takım-oyuncu ilişkileri
 
 ### ⚠️ Kısmi Karşılanan Tablolar (3/6)
+
 - **Player Transfer**: Temel transfer bilgisi var, finansal detaylar eksik
 - **Team Staff**: Sadece mevcut teknik direktör
 - **Player Injury**: Temel sakatlık bilgileri var, detaylar eksik
 
 ### ❌ Kritik Eksiklikler (2/6)
+
 - **Player Development**: Piyasa değeri takibi yok
 - **Player Additional Info**: Ek bilgiler yok
 
 ### 🔧 Öneriler
 
 #### Finansal Veriler
+
 1. **Transfermarkt API**: Piyasa değeri ve transfer ücretleri için
 2. **Manuel Veri Girişi**: Kritik transferler için
 3. **Tahmin Algoritmaları**: Performans bazlı değer hesaplama
 
 #### Sakatlık Takibi
+
 1. **Season Missing Players API**: Temel sakatlık bilgileri için
 2. **Alternatif Kaynaklar**: Detaylı sakatlık bilgileri için spor haber siteleri
 3. **Manuel Takip**: Dönüş tarihleri ve iyileşme durumu için
 4. **Lineup Analizi**: Sürekli eksik oyuncuları tespit etme
 
 #### Personel Yönetimi
+
 1. **Tarihsel Veri Koruma**: Mevcut staff verilerini sakla
 2. **Manuel Güncelleme**: Sezon başlarında staff güncellemeleri
 3. **Haber Takibi**: Teknik direktör değişiklikleri için
 
 #### Veri Zenginleştirme
+
 1. **Çoklu Kaynak**: Farklı API'lerden veri birleştirme
 2. **Veri Kalitesi**: Tutarlılık kontrolleri
 3. **Fallback Stratejileri**: Eksik veriler için alternatifler

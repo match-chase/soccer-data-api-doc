@@ -5,6 +5,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 1. Team Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -16,8 +17,8 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 
 | `countryId` | UUID | Ülke referansı | ❌ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `competitor.name` | `/competitors/{id}/profile` | ✅ |
@@ -34,6 +35,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 2. Player Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -53,8 +55,8 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 | `outfitter` | String | Sponsor | ❌ |
 | `countryOfBirthId` | UUID | Doğum ülkesi | ✅ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `firstName` | `player.first_name` | `/seasons/{id}/competitors/{id}/players` | ✅ |
@@ -73,7 +75,6 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 | `outfitter` | - | - | ❌ |
 | `countryOfBirthId` | `player.country_code` | `/players/{id}/profile` | ✅ |
 
-
 **Durum:** ✅ Çoğu bilgi karşılanabilir, sadece piyasa değeri ve emeklilik durumu eksik
 
 ---
@@ -81,21 +82,19 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 3. Staff Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
 | `name` | String | Personel adı | ✅ |
 | `dateOfBirth` | Timestamp | Doğum tarihi | ❌ |
 
-
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `manager.name` | `/sport_events/{id}/lineups` | ✅ |
 | `dateOfBirth` | `manager.date_of_birth` | `/sport_events/{id}/lineups` | ✅ |
-
-
 
 **Durum:** ✅ Temel bilgiler karşılanabilir
 
@@ -104,6 +103,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 4. Referee Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -112,8 +112,8 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 | `dateOfBirth` | Timestamp | Doğum tarihi | ❌ |
 | `tmId` | Integer | Transfermarkt ID | ❌ |
 
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `firstName` | `referee.name` (ayrıştırma) | Sport event conditions | ⚠️ |
@@ -128,6 +128,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 5. Player Citizenship Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -136,6 +137,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 | `order` | Integer | Vatandaşlık önceliği | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | Player ID | `/players/{id}/profile` | ✅ |
@@ -149,6 +151,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## 6. Player Position Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -156,6 +159,7 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 | `position` | String | Pozisyon | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `playerId` | Player ID | `/players/{id}/profile` | ✅ |
@@ -168,19 +172,23 @@ Bu bölümde takım, oyuncu ve personel tablolarının migration mapping'i yer a
 ## Özet
 
 ### ✅ Tam Karşılanan Tablolar (2/6)
+
 - **Team**: Çoğu bilgi karşılanabilir, sadece kuruluş yılı eksik
 - **Player**: Çoğu bilgi karşılanabilir, sadece piyasa değeri ve emeklilik durumu eksik
 
 ### ⚠️ Kısmi Karşılanan Tablolar (4/6)
+
 - **Staff**: Temel bilgiler var, görsel eksik
 - **Referee**: Sadece isim var
 - **Player Citizenship**: Tek vatandaşlık
 - **Player Position**: Sadece ana pozisyon
 
 ### ❌ Kritik Eksiklikler (0/6)
+
 - Hiçbiri
 
 ### 🔧 Öneriler
+
 1. **Piyasa Değeri**: Transfermarkt API entegrasyonu
 2. **Görsel İçerik**: Ayrı görsel veri kaynağı
 3. **Takım Detayları**: Manuel veri girişi gerekli

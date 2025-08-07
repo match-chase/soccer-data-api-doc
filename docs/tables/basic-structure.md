@@ -5,23 +5,22 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 ## 1. Country Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
 | `name` | String | Ülke adı | ✅ |
 | `unicode` | String | Unicode kodu | ❌ |
 
-
 | `createdAt` | Timestamp | Oluşturma tarihi | ✅ |
 | `updatedAt` | Timestamp | Güncelleme tarihi | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `category.name` | `/competitions` | ✅ |
 | `unicode` | `category.country_code` | `/competitions` | ✅ |
-
-
 
 **Durum:** ✅ Tam karşılanabilir
 
@@ -30,6 +29,7 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 ## 2. League Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -46,9 +46,8 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 | `endSeasonMonth` | Integer | Sezon bitiş ayı | ❌ |
 | `countryId` | UUID | Ülke referansı | ✅ |
 
-
-
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `competition.name` | `/competitions/{id}/info` | ✅ |
@@ -63,7 +62,6 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 | `endDate` | `season.end_date` | `/seasons/{id}` | ⚠️ |
 | `countryId` | `competition.category.country_code` | `/competitions/{id}/info` | ✅ |
 
-
 **Durum:** ❌ Kritik eksiklikler - lig hiyerarşisi ve meta bilgiler yok
 
 ---
@@ -71,6 +69,7 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 ## 3. Generic Status Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -81,6 +80,7 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 | `isActive` | Boolean | Aktif mi | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `name` | `sport_event_status.status` | `/sport_events/{id}/summary` | ⚠️ |
@@ -96,6 +96,7 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 ## 4. League Team Tablosu
 
 ### Eski Tablo Yapısı
+
 | Kolon | Tip | Açıklama | Zorunlu |
 |-------|-----|----------|---------|
 | `id` | UUID | Primary Key | ✅ |
@@ -104,6 +105,7 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 | `year` | Integer | Sezon yılı | ✅ |
 
 ### Yeni API Mapping
+
 | Eski Kolon | Yeni API Alanı | Endpoint | Durum |
 |------------|----------------|----------|-------|
 | `teamId` | `competitor.id` | `/seasons/{id}/competitors` | ✅ |
@@ -117,16 +119,20 @@ Bu bölümde ülke, lig ve temel yapısal tabloların migration mapping'i yer al
 ## Özet
 
 ### ✅ Tam Karşılanan Tablolar (2/4)
+
 - **Country**: Tam karşılanabilir
 - **League Team**: Takım-lig ilişkileri
 
 ### ⚠️ Kısmi Karşılanan Tablolar (1/4)
+
 - **Generic Status**: Sadece maç durumları
 
 ### ❌ Kritik Eksiklikler (1/4)
+
 - **League**: Lig hiyerarşisi ve meta bilgiler
 
 ### 🔧 Öneriler
+
 1. **Lig Hiyerarşisi**: Manuel mapping tablosu oluşturulmalı
 2. **Görsel İçerik**: Ayrı CDN/storage çözümü gerekli
 3. **Meta Bilgiler**: Alternatif veri kaynakları araştırılmalı

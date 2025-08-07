@@ -11,6 +11,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 📊 Maç İstatistikleri - Ekstra Veriler
 
 ### 🏟️ **Temel Maç Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `start_time_confirmed` | Maç saati kesin mi | `/sport_events/{id}/summary` | `true/false` |
@@ -20,6 +21,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `neutral_ground` | Tarafsız saha mı | `/sport_events/{id}/summary` | `true/false` |
 
 ### 🌤️ **Hava Durumu Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `weather.wind` | Rüzgar durumu | `/sport_events/{id}/summary` | `"light"` |
@@ -29,6 +31,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `weather.pitch_conditions` | Saha koşulları | `/sport_events/{id}/summary` | `"good"` |
 
 ### 📺 **Yayın Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `channels[].name` | TV kanalı adı | `/sport_events/{id}/summary` | `"Sky Sports"` |
@@ -41,6 +44,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🏃‍♂️ Oyuncu İstatistikleri - Ekstra Veriler
 
 ### 📈 **Gelişmiş Performans Metrikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `aerial_duels_won` | Kazanılan hava topu mücadelesi | `/sport_events/{id}/extended_summary` | `8` |
@@ -56,6 +60,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `duels_total` | Toplam ikili mücadeleler | `/sport_events/{id}/extended_summary` | `18` |
 
 ### 🎯 **Pas İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `passes_successful` | Başarılı paslar | `/sport_events/{id}/extended_summary` | `45` |
@@ -66,6 +71,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `key_passes` | Kilit paslar | `/sport_events/{id}/extended_summary` | `3` |
 
 ### 🛡️ **Savunma İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `tackles_successful` | Başarılı müdahaleler | `/sport_events/{id}/extended_summary` | `5` |
@@ -75,6 +81,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `clearances` | Uzaklaştırmalar | `/sport_events/{id}/extended_summary` | `6` |
 
 ### ⚽ **Şut İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `shots_total` | Toplam şutlar | `/sport_events/{id}/extended_summary` | `4` |
@@ -85,6 +92,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `shots_outside_box` | Ceza sahası dışı şutlar | `/sport_events/{id}/extended_summary` | `1` |
 
 ### 🥅 **Kaleci İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `saves` | Kurtarışlar | `/sport_events/{id}/extended_summary` | `6` |
@@ -98,6 +106,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🏟️ Stadyum Bilgileri - Ekstra Veriler
 
 ### 📍 **Detaylı Venue Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `capacity` | Stadyum kapasitesi | `/competitors/{id}/profile` | `60000` |
@@ -115,6 +124,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 👕 Takım Bilgileri - Ekstra Veriler
 
 ### 🎨 **Forma Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `jerseys[].type` | Forma tipi | `/competitors/{id}/profile` | `"home"/"away"/"third"` |
@@ -128,6 +138,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `jerseys[].squares` | Kareli desen | `/competitors/{id}/profile` | `false` |
 
 ### 🏆 **Takım Meta Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `age_group` | Yaş grubu | `/competitors/{id}/profile` | `"U21"/"Senior"` |
@@ -141,6 +152,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 👤 Oyuncu Bilgileri - Ekstra Veriler
 
 ### 📋 **Detaylı Kişisel Bilgiler**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `first_name` | Ad | `/seasons/{id}/competitors/{id}/players` | `"Cristiano"` |
@@ -154,6 +166,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `gender` | Cinsiyet | `/players/{id}/profile` | `"male"` |
 
 ### 🏃‍♂️ **Fiziksel Özellikler**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `height` | Boy (cm) | `/players/{id}/profile` | `187` |
@@ -162,6 +175,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `type` | Pozisyon tipi | `/players/{id}/profile` | `"forward"/"midfielder"/"defender"/"goalkeeper"` |
 
 ### 📅 **Kariyer Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `roles[].active` | Aktif mi | `/players/{id}/profile` | `true` |
@@ -175,6 +189,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🏆 Lig ve Sezon Bilgileri - Ekstra Veriler
 
 ### 📊 **Sezon Detayları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `start_date` | Sezon başlangıcı | `/seasons/{id}` | `"2023-08-12"` |
@@ -184,6 +199,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `disabled` | Devre dışı mı | `/seasons/{id}` | `false` |
 
 ### 🏅 **Lig Hiyerarşisi**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `competition.parent_id` | Üst lig ID'si | `/competitions/{id}/info` | `"sr:competition:1"` |
@@ -197,6 +213,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 📈 Puan Durumu - Ekstra Veriler
 
 ### 🏆 **Detaylı Sıralama Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `change` | Sıralama değişimi | `/seasons/{id}/standings` | `+2/-1/0` |
@@ -210,6 +227,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🎮 Canlı Maç Verileri - Ekstra Veriler
 
 ### ⚡ **Gerçek Zamanlı Bilgiler**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `match_time` | Maç dakikası | `/sport_events/{id}/timeline` | `45` |
@@ -219,6 +237,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 | `remaining_time_in_period` | Devredeki kalan süre | `/sport_events/{id}/timeline` | `"00:02:30"` |
 
 ### 📍 **Olay Koordinatları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `x` | X koordinatı | `/sport_events/{id}/extended_timeline` | `85` |
@@ -232,12 +251,14 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🤖 AI Destekli İçerik
 
 ### 📝 **Otomatik Metin İçeriği**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `commentaries[].text` | Canlı yorum | `/sport_events/{id}/timeline` | `"Great save by the goalkeeper!"` |
 | `fun_facts[].statement` | Eğlenceli bilgiler | `/sport_events/{id}/fun_facts` | `"This is the 100th meeting between these teams"` |
 
 ### 📊 **Otomatik Analizler**
+
 - Maç öncesi tahminler
 - Devre arası özetler  
 - Maç sonu analizler
@@ -248,6 +269,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 ## 🎯 Kullanım Önerileri
 
 ### 🚀 **Öncelikli Ekstra Veriler**
+
 1. **Hava durumu bilgileri** - Kullanıcı deneyimini artırır
 2. **Forma renkleri** - Görsel zenginlik sağlar
 3. **Oyuncu fiziksel özellikleri** - Detaylı profiller
@@ -255,6 +277,7 @@ Sportradar API'si eski veritabanımızdan çok daha zengin veri sağlamaktadır.
 5. **Canlı koordinatlar** - İnteraktif deneyim
 
 ### 💡 **Geliştirme Fırsatları**
+
 - **Heatmap görselleştirmeleri** (koordinat verileri ile)
 - **Performans radarları** (gelişmiş istatistikler ile)
 - **Takım karşılaştırma araçları**
@@ -268,6 +291,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🔄 Transfer Bilgileri - Ekstra Veriler
 
 ### 💰 **Transfer Detayları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `transfer_date` | Transfer tarihi | `/seasons/{id}/transfers` | `"2023-08-15"` |
@@ -281,6 +305,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🏥 Sakatlık Takibi - Ekstra Veriler
 
 ### 🚑 **Missing Players Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `reason` | Eksiklik sebebi | `/seasons/{id}/missing_players` | `"injured"/"suspended"/"on_loan"/"other"` |
@@ -294,6 +319,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 📊 Sezonluk İstatistikler - Ekstra Veriler
 
 ### 🏆 **Takım Sezon İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `statistics.goals_for` | Attığı gol | `/seasons/{id}/competitors/{id}/statistics` | `85` |
@@ -305,6 +331,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `statistics.failed_to_score` | Gol atamadığı maç | `/seasons/{id}/competitors/{id}/statistics` | `3` |
 
 ### ⚽ **Oyuncu Sezon İstatistikleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `statistics.goals` | Sezon golleri | `/seasons/{id}/competitors/{id}/players` | `28` |
@@ -319,6 +346,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🎲 Bahis ve Olasılık Verileri
 
 ### 📈 **Maç Olasılıkları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `markets[].outcomes[].name` | Sonuç tipi | `/sport_events/{id}/probabilities` | `"1"/"X"/"2"` |
@@ -331,6 +359,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🏟️ Maç Kadroları - Ekstra Veriler
 
 ### 👥 **Detaylı Kadro Bilgileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `lineups[].players[].starter` | İlk 11'de mi | `/sport_events/{id}/lineups` | `true/false` |
@@ -340,6 +369,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `lineups[].formation` | Diziliş | `/sport_events/{id}/lineups` | `"4-3-3"` |
 
 ### 👨‍💼 **Teknik Kadro**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `manager.name` | Teknik direktör | `/competitors/{id}/profile` | `"Pep Guardiola"` |
@@ -352,6 +382,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🎯 Timeline Olayları - Ekstra Veriler
 
 ### ⚽ **Gol Detayları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `type` | Olay tipi | `/sport_events/{id}/timeline` | `"goal"/"penalty_goal"/"own_goal"` |
@@ -362,6 +393,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `away_score` | Deplasman skoru | `/sport_events/{id}/timeline` | `1` |
 
 ### 🟨 **Kart Detayları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `type` | Kart tipi | `/sport_events/{id}/timeline` | `"yellow_card"/"red_card"/"yellow_red_card"` |
@@ -370,6 +402,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `reason` | Sebep | `/sport_events/{id}/timeline` | `"Foul"` |
 
 ### 🔄 **Oyuncu Değişikliği Detayları**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `type` | Olay tipi | `/sport_events/{id}/timeline` | `"substitution"` |
@@ -382,6 +415,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🏆 Liderlik Tabloları - Ekstra Veriler
 
 ### 👑 **Sezon Liderleri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `leaders[].player.name` | Oyuncu adı | `/seasons/{id}/leaders` | `"Erling Haaland"` |
@@ -394,6 +428,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 📱 Mobil Uygulama İçin Özel Veriler
 
 ### 🔔 **Push Notification Verileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `priority` | Öncelik | Push Feeds | `"high"/"medium"/"low"` |
@@ -401,6 +436,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `message` | Mesaj | Push Feeds | `"GOAL! Messi scores for PSG"` |
 
 ### 📊 **Widget Verileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `mini_match.status` | Mini maç durumu | Live Feeds | `"live"/"finished"` |
@@ -412,6 +448,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🎮 Gelişmiş Analitik Veriler
 
 ### 📈 **xG (Expected Goals) Verileri**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `expected_goals` | Beklenen gol | Extended Timeline | `1.8` |
@@ -419,6 +456,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 | `big_chances` | Büyük fırsatlar | Extended Timeline | `3` |
 
 ### 🏃‍♂️ **Fiziksel Performans**
+
 | Alan | Açıklama | Endpoint | Örnek Değer |
 |------|----------|----------|-------------|
 | `distance_covered` | Kat edilen mesafe | Extended Summary | `11.2` |
@@ -430,6 +468,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 ## 🌍 Çoklu Dil Desteği
 
 ### 🗣️ **Dil Seçenekleri**
+
 - `en` - İngilizce
 - `de` - Almanca
 - `es` - İspanyolca
@@ -442,6 +481,7 @@ Bu ekstra veriler uygulamanızı rakiplerinden ayıracak ve kullanıcılarınız
 - `ja` - Japonca
 
 ### 📝 **Çeviri Örnekleri**
+
 | İngilizce | Türkçe | Almanca | İspanyolca |
 |-----------|--------|---------|------------|
 | `"Goal"` | `"Gol"` | `"Tor"` | `"Gol"` |
